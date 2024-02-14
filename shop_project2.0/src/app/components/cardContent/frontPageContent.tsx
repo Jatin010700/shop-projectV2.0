@@ -22,7 +22,7 @@ type CardProps = {
   product: MongooseModel[];
 };
 
-const Card: React.FC<CardProps> = () => {
+export const Card: React.FC<CardProps> = () => {
   const [products, setProducts] = useState<MongooseModel[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [wishCart, setWishCart] = useRecoilState<MongooseModel[]>(wishListState);
@@ -157,4 +157,3 @@ const Card: React.FC<CardProps> = () => {
   );
 };
 
-export default Card;
