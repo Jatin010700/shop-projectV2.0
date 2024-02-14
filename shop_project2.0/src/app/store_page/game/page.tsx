@@ -24,7 +24,7 @@ type StoreProps = {
   product: StoreModel[];
 };
 
-const Game: React.FC<StoreProps> = () => {
+export const Game: React.FC<StoreProps> = () => {
   const [products, setProducts] = useState<StoreModel[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
@@ -237,5 +237,3 @@ const addItemsToCart = (product: StoreModel) => {
     </>
   );
 };
-
-export default Game;
