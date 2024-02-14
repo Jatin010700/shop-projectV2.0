@@ -4,7 +4,8 @@ import SearchInputDiv from "./game/searchDiv";
 import { useRecoilValue } from "recoil";
 import SearchState from "../atoms/searchState";
 import ShopStore from "./storeMainPage";
-import { Game } from "./game/page";
+import { GamePage } from "./game/page";
+
 
 export default function StoreMain() {
   const searchString = useRecoilValue(SearchState).searchString;
@@ -12,7 +13,7 @@ export default function StoreMain() {
   return (
     <>
       {searchString === "" && <SearchInputDiv />}
-      {searchString !== "" ? <Game /> : <ShopStore />}
+      {searchString !== "" ? <GamePage /> : <ShopStore />}
     </>
   );
 }
