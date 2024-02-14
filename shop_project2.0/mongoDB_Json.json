@@ -1,0 +1,158 @@
+[
+    {
+        "name": "Keyboard",
+        "price": 100,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707388274/shopProjectV2.0/waytvvqy1gns1j3f92ng.jpg",
+        "quantity": 1
+    },
+    {
+        "name": "mouse",
+        "price": 150,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707388275/shopProjectV2.0/jfpemhhg7jpctjjyionh.jpg",
+        "quantity": 1
+    },
+    {
+        "name": "Keyboard",
+        "price": 100,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707388274/shopProjectV2.0/waytvvqy1gns1j3f92ng.jpg",
+        "quantity": 1
+    },
+    {
+        "name": "mouse",
+        "price": 150,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707388275/shopProjectV2.0/jfpemhhg7jpctjjyionh.jpg",
+        "quantity": 1
+    },
+    {
+        "name": "Keyboard",
+        "price": 100,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707388274/shopProjectV2.0/waytvvqy1gns1j3f92ng.jpg",
+        "quantity": 1
+    },
+    {
+        "name": "mouse",
+        "price": 150,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707388275/shopProjectV2.0/jfpemhhg7jpctjjyionh.jpg",
+        "quantity": 1
+    },
+    {
+        "name": "Keyboard",
+        "price": 100,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707388274/shopProjectV2.0/waytvvqy1gns1j3f92ng.jpg",
+        "quantity": 1
+    },
+    {
+        "name": "mouse",
+        "price": 150,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707388275/shopProjectV2.0/jfpemhhg7jpctjjyionh.jpg",
+        "quantity": 1
+    },
+
+
+    {
+        "username": "Jatin",
+        "password": "123"
+    },
+    {
+        "username": "Test",
+        "password": "123"
+    }
+],
+[
+    {
+        "name": "God Of War Ragnarok",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653426/shopProjectV2.0/tas6r85o06aqprb7vlog.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Ghost of Tsushima",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653425/shopProjectV2.0/rzwwtxydfc6ex5c7vr1m.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Spider man",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653441/shopProjectV2.0/tjuusorxpf9pbsgemc1z.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Gran Turismo",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653425/shopProjectV2.0/rxmyaknofq599tov32kf.webp",
+        "quantity": 1
+    },
+    {
+        "name": "God Of War Ragnarok",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653426/shopProjectV2.0/tas6r85o06aqprb7vlog.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Ghost of Tsushima",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653425/shopProjectV2.0/rzwwtxydfc6ex5c7vr1m.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Spider Man",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653441/shopProjectV2.0/tjuusorxpf9pbsgemc1z.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Gran Turismo",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653425/shopProjectV2.0/rxmyaknofq599tov32kf.webp",
+        "quantity": 1
+    },
+    {
+        "name": "God Of War Ragnarok",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653426/shopProjectV2.0/tas6r85o06aqprb7vlog.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Ghost of Tsushima",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653425/shopProjectV2.0/rzwwtxydfc6ex5c7vr1m.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Spider Man",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653441/shopProjectV2.0/tjuusorxpf9pbsgemc1z.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Gran Turismo",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653425/shopProjectV2.0/rxmyaknofq599tov32kf.webp",
+        "quantity": 1
+    },
+    {
+        "name": "God Of War Ragnarok",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653426/shopProjectV2.0/tas6r85o06aqprb7vlog.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Ghost of Tsushima",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653425/shopProjectV2.0/rzwwtxydfc6ex5c7vr1m.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Spider Man",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653441/shopProjectV2.0/tjuusorxpf9pbsgemc1z.webp",
+        "quantity": 1
+    },
+    {
+        "name": "Gran Turismo",
+        "price": 59.99,
+        "image": "https://res.cloudinary.com/dttarxcrw/image/upload/v1707653425/shopProjectV2.0/rxmyaknofq599tov32kf.webp",
+        "quantity": 1
+    }
+]
