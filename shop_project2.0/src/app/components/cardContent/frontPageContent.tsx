@@ -18,11 +18,8 @@ interface MongooseModel {
   quantity: number;
 }
 
-type CardProps = {
-  product: MongooseModel[];
-};
 
-export const Card: React.FC<CardProps> = () => {
+export const Card = () => {
   const [products, setProducts] = useState<MongooseModel[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [wishCart, setWishCart] = useRecoilState<MongooseModel[]>(wishListState);

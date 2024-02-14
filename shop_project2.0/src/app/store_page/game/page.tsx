@@ -20,11 +20,11 @@ interface StoreModel {
   quantity: number;
 }
 
-type StoreProps = {
-  product: StoreModel[];
-};
+// type StoreProps = {
+//   product: StoreModel[];
+// };
 
-const GamePage: React.FC<StoreProps> = () => {
+const GamePage = () => {
   const [products, setProducts] = useState<StoreModel[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);

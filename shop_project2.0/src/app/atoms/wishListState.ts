@@ -8,17 +8,9 @@ interface StoreModel {
     quantity: number;
   }
 
-  interface MongooseModel {
-    _id: string;
-    name: string;
-    price: number;
-    image: string;
-    quantity: number;
-  }
-
 const wishListState = atom({
     key: "wishListState",
-    default: <StoreModel[]><MongooseModel[]>([])
+    default: [] as StoreModel[],
 })
 
 export default wishListState

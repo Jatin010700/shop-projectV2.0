@@ -2,9 +2,8 @@
 import { Button, Modal } from "flowbite-react";
 import { useEffect, useState } from "react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe, Stripe } from "@stripe/stripe-js";
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || "");
 export default function CheckoutModal() {
   const [openModal, setOpenModal] = useState(false);
 
@@ -19,23 +18,7 @@ export default function CheckoutModal() {
       console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
     }
   }, []);
-
-  const handleCheckout = async () => {
-    try {
-      const stripe = await stripePromise;
-      const response = await fetch("/api/checkout_sessions", {
-        method: "POST",
-      });
-
-      const session = await response.json();
-
-      await stripe.redirectToCheckout({
-        sessionId: session.id,
-      });
-    } catch (error) {
-      console.error("Error during checkout:", error);
-    }
-  };
+  
   return (
     <>
       <Button
@@ -70,7 +53,6 @@ export default function CheckoutModal() {
                 <form action="/api/checkout_sessions" method="POST">
                     <Button
                      type="submit" role="link"
-                     onClick={handleCheckout}
                         className="!border-none focus:!ring-0 rounded-full font-bold 
                                 bg-RED hover:!bg-RED hover:scale-110 duration-150">
                         {"Yes, I'm sure"}

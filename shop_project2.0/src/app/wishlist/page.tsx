@@ -28,7 +28,7 @@ export default function Wishlist() {
             </div>
           </>
         ) : (
-          wishCart.map((item) => <WishlistComponent key={item} data={item} />)
+          wishCart.map((item) => <WishlistComponent key={item._id} data={item} />)
         )}
       </section>
     </>
