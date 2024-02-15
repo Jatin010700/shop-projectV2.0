@@ -14,10 +14,6 @@ const List = ({ classDiv, classGrid }: listProps) => {
   
   return (
     <>
-      {/* <SearchInputDiv
-      handleSearchProps={(e:any) => setSearchTerm(e.target.value)}
-      searchTermProps={searchTerm}/> */}
-
       <div className="bg-white grid grid-cols-3 gap-2 md:py-4 p-4 w-full md:w-11/12 h-auto">
         <div
           className={`col-span-2 row-span-2 w-full h-48 md:h-96 lg:h-full ${classGrid}  hover:!scale-[1.01]`}

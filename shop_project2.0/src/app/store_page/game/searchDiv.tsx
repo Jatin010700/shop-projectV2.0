@@ -25,12 +25,12 @@ export default function SearchInputDiv() {
           onChange={handleSearch}
         />
         <i
-          className="bi bi-search absolute left-[310px] md:left-[350px]
+          className="bi bi-search absolute left-[300px] md:left-[350px]
           bg-RED px-[12px] py-2 rounded-full cursor-pointer"
         ></i>
         {searchTerm.searchString === "" ? null : (
           <i className="bi bi-x bg-RED px-[8px] py-1 
-          rounded-full text-2xl absolute right-[310px] md:right-[350px] cursor-pointer"
+          rounded-full text-2xl absolute right-[300px] md:right-[350px] cursor-pointer"
           onClick={resetSearch}></i>
         )}
       </div>

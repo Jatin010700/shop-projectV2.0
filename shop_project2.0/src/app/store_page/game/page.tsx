@@ -220,7 +220,7 @@ const addItemsToCart = (product: StoreModel) => {
           </div>
         ) : (
           <div className="flex items-center justify-center h-80">
-            <div className="flex flex-col w-1/2 bg-dark text-RED py-4 rounded-full">
+            <div className="flex flex-col w-full md:w-1/2 bg-dark text-RED py-4 rounded-full">
               <p className="text-2xl font-bold text-center">
                 ITEM NOT FOUND!!!
               </p>
