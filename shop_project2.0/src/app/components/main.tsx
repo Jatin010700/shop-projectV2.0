@@ -49,7 +49,7 @@ export default function Header() {
           </button>
         </div>
 
-        <div className=" hidden mt-8 md:mt-0 md:relative md:flex justify-center md:justify-end">
+        <div className="hidden mt-8 md:mt-0 md:relative md:flex justify-center md:justify-end">
           <Image
             src="/assets/laptop1.png"
             alt=""
@@ -60,7 +60,7 @@ export default function Header() {
         </div>
       </main>
 
-      <div className="bg-dark text-white text-center flex flex-col justify-center items-center h-[130px]">
+      <div className="hidden bg-dark text-white text-center md:flex flex-col justify-center items-center h-[130px]">
         <p className="text-lg md:text-xl font-bold">Scroll Down</p>
         <div className="w-1/2 md:w-3/4 mx-auto mt-2">
           <i className="bi bi-arrow-down-circle-fill text-RED text-2xl animate-bounce"></i>

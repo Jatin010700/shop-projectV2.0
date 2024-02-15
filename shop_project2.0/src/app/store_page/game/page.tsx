@@ -204,7 +204,7 @@ const addItemsToCart = (product: StoreModel) => {
                   </p>
 
                   <div></div>
-                  <button className="bg-dark rounded-full font-bold 
+                  <button className="bg-dark text-white rounded-full font-bold 
                   !border-none focus:ring-0  hover:scale-105 duration-150 w-3/4 p-2"
                   onClick={() =>addItemsToCart(item)}>
                     Add to Cart

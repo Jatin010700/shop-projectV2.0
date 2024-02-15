@@ -46,7 +46,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="bg-dark text-white w-full px-4 flex flex-row items-center justify-between">
+      <div className="bg-dark text-white w-full px-4 pt-2 md:pt-0 flex flex-row items-center justify-between">
             <Link href="/" className="text-xl font-bold ">
               Tech
               <span className="text-RED text-2xl">Shop</span>
@@ -54,10 +54,10 @@ export default function Navbar() {
 
         <nav className="hidden gap-4 md:flex md:items-center 
         md:justify-center w-full md:w-auto md:mb-0 rounded-b-full bg-RED py-4 px-10 ml-14">
-          <CustomLink to="" title="What's New" className="font-bold" />
+          <CustomLink to="/store_page" title="What's New" className="font-bold hover:text-dark" />
           <CustomLink to="/store_page" title="Store" className="font-bold hover:text-dark" />
-          <CustomLink to="" title="About" className="font-bold" />
-          <CustomLink to="" title="Contact Us" className="font-bold" />
+          <CustomLink to="" title="About" className="font-bold hover:text-dark" />
+          <CustomLink to="" title="Contact Us" className="font-bold hover:text-dark" />
         </nav>
 
         <div className="flex items-center gap-3">
@@ -68,7 +68,7 @@ export default function Navbar() {
               <i className="bi bi-bag-plus-fill cursor-pointer text-3xl 
               hover:text-RED rounded-full scale-105 duration-150 hover:scale-125
               relative"></i>
-              <span className="absolute right-14 top-3 bg-RED px-2 text-base rounded-full">
+              <span className="absolute right-14 md:top-3 bg-RED px-2 text-base rounded-full">
                 {totalQuantity}
               </span>
             </Link>

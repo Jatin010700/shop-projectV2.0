@@ -6,6 +6,7 @@ import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import wishListState from "@/app/atoms/wishListState";
+import MobileDropdownMenu from "./mobileDropdown";
 
 export default function ProfileMenu() {
   const [iconClick, setIconClick] = useState(false);
@@ -68,6 +69,7 @@ export default function ProfileMenu() {
             </Dropdown.Item>
           </>
         )}
+          <MobileDropdownMenu/>
       </div>
     </Dropdown>
   );
