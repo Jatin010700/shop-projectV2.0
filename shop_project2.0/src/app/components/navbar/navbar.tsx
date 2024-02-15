@@ -68,7 +68,7 @@ export default function Navbar() {
               <i className="bi bi-bag-plus-fill cursor-pointer text-3xl 
               hover:text-RED rounded-full scale-105 duration-150 hover:scale-125
               relative"></i>
-              <span className="absolute right-14 md:top-3 bg-RED px-2 text-base rounded-full">
+              <span className="absolute right-14 top-3 md:top-5 bg-RED px-2 text-base rounded-full">
                 {totalQuantity}
               </span>
             </Link>
