@@ -5,11 +5,21 @@ import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer";
 import RecoilRootWrapper from "./recoilRootWrapper";
 import { Toaster } from "react-hot-toast";
+import { CustomFlowbiteTheme, Flowbite } from "flowbite-react";
+import { HelpBot } from "./components/helpBot/helpBot";
 
 const poppin = Poppins({ 
   weight: '400',
   subsets: ['latin'] ,
 })
+
+const customTheme: CustomFlowbiteTheme = {
+  modal: {
+      content: {
+          "inner": "rounded-3xl bg-white"
+      }
+  }
+}
 
 export const metadata: Metadata = {
   title: "Tech ShopV2.0",
@@ -24,12 +34,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppin.className}>
+      <Flowbite theme={{ theme: customTheme }}>
         <RecoilRootWrapper>
           <Toaster position="top-center" />
           <Navbar/>
             {children}
+            <HelpBot/>
           <Footer/>
         </RecoilRootWrapper>
+        </Flowbite>
         </body>
     </html>
   );
