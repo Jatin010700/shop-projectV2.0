@@ -35,19 +35,11 @@ export default function CheckoutModal() {
         onClose={() => setOpenModal(false)}
         popup
       >
-        <div className="text-dark flex justify-end items-center px-6 pt-6">
-          <button onClick={() => setOpenModal(false)}>
-            <i
-              className="bi bi-x-circle-fill 
-            text-2xl hover:text-RED scale-105 duration-150"
-            ></i>
-          </button>
-        </div>
         <Modal.Body>
-          <div className="text-center">
-            <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-RED" />
+          <div className="text-center pt-6">
+            <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14  text-RED" />
             <h3 className="mb-5 text-lg font-normal text-dark">
-              Are you sure you want to proceed purchase?
+              Are you sure you want to proceed with your purchase?
             </h3>
             <div className="flex justify-center gap-4">
                 <form action="/api/checkout_sessions" method="POST">

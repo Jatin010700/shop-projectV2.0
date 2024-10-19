@@ -1,83 +1,107 @@
 "use client";
-
-import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
+import { Button, Label, Modal } from "flowbite-react";
 import { useState } from "react";
+import Preloader from "../extra/preloader";
+import { useRecoilState } from "recoil";
+import { modalState } from "@/app/atoms/userState";
 
 export default function RegisterModal() {
-  const [openModal, setOpenModal] = useState(false);
-  const [userName, setUserName] = useState("");
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [iconClick, setIconClick] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [modal, setModal] = useRecoilState(modalState);
 
   function onCloseModal() {
-    setOpenModal(false);
     setUserName("");
-  }
+    setPassword("");
+
+    setModal({
+      logInModal: false,
+      createAccountModal: false,
+    });
+  };
 
   return (
     <>
-      <Button
-        onClick={() => setOpenModal(true)}
-        className="rounded-full bg-RED border-1 border-RED font-bold shadow-xl hover:scale-110 duration-150"
-      >
-        Create Account
-      </Button>
       <Modal
         dismissible
-        show={openModal}
+        show={modal.createAccountModal}
         size="md"
         onClose={onCloseModal}
         popup>
-        <Modal.Header />
         <Modal.Body>
-          <div className="space-y-6">
+          <div className="text-xl text-RED font-bold space-y-6 pt-6 relative">
             <h3 className="text-xl text-RED font-bold">
-              Register to our platform
+              Create your personal account
             </h3>
+            <button onClick={onCloseModal} className="text-dark absolute top-0 right-0">
+              <i className="bi bi-x-circle-fill text-2xl hover:text-RED scale-105 duration-150"></i>
+            </button>
             <div>
               <div className="mb-2 block">
-                <Label htmlFor="email" value="Your Username:" className="font-bold" />
+                <Label
+                  htmlFor="email"
+                  value="Username"
+                  className="font-bold"
+                />
               </div>
-              <input type="text" 
-              value={userName} 
-              className="w-full rounded-full text-dark text-sm"
-              placeholder="Username"
-              onChange={(e) => setUserName(e.target.value)}
-              required/>
+              <input
+                type="text"
+                value={username}
+                className="w-full rounded-full text-dark text-sm border-1 focus:border-RED focus:ring-0"
+                onChange={(e) => setUserName(e.target.value)}
+                required
+              />
             </div>
-            <div>
+            <div className="mt-2">
               <div className="mb-2 block">
-                <Label htmlFor="password" value="Your password:" className="font-bold" />
+                <Label
+                  htmlFor="password"
+                  value="Password"
+                  className="font-bold"
+                />
               </div>
-              <input type="password" 
-              className="w-full rounded-full text-dark text-sm"
-              placeholder="********"
-              required/>
-            </div>
-            <div className="flex justify-between">
-              <div className="flex items-center gap-2">
-                <Checkbox id="remember" className="text-RED border-RED"/>
-                <Label htmlFor="remember" className="font-bold">Remember me</Label>
+              <div className="relative flex items-center">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className="placeholder:translate-y-0.5 w-full rounded-full text-dark text-sm border-1 focus:border-RED focus:ring-0"
+                  placeholder="********"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+                <i
+                  className={`bi bi-eye-fill absolute right-5 text-lg cursor-pointer ${
+                    iconClick ? "text-RED" : "text-dark"
+                  } `}
+                  onClick={() => {
+                    setShowPassword(!showPassword);
+                    setIconClick(!iconClick);
+                  }}
+                ></i>
               </div>
-              <a
-                href="#"
-                className="text-sm text-RED font-bold hover:underline dark:text-cyan-500"
-              >
-                Lost Password?
-              </a>
             </div>
             <div className="w-full flex justify-center">
-              <Button className="text-dark rounded-full w-full bg-RED font-bold hover:scale-110 duration-150">
-                Register your account</Button>
+              <Button
+                className="text-white rounded-full w-full 
+              bg-RED font-bold hover:scale-105 duration-150 shadow-xl !border-none focus:ring-0">
+                {isLoading ? (
+                  <Preloader
+                    preloaderSize="14"
+                    preloaderColor="#ffffff"
+                    className=""
+                  />
+                ) : (
+                  "CREATE ACCOUNT"
+                )}
+              </Button>
             </div>
-            <p className="font-bold text-dark">Note: This project does not have registering feature
-            <span className="text-RED ml-1">Please use account detail in login page?</span></p>
-            <div className="flex justify-between text-sm font-medium text-RED ">
-              Not registered?&nbsp;
-              <a
-                href="#"
-                className="text-cyan-700 hover:underline dark:text-cyan-500">
-                Create account
-              </a>
-            </div>
+            <p className="font-bold text-dark text-sm">
+              Login Account:<span className=" text-RED">Test, 123 <br/>Note:</span>
+            This project doesn&apos;t have a registering feature
+            </p>
           </div>
         </Modal.Body>
       </Modal>

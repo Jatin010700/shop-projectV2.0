@@ -32,34 +32,26 @@ export default function Footer() {
               </h5>
               <div className="mt-6 md:mb-0 mb-6 flex justify-center md:justify-start">
                 <button
-                  className="bg-dark text-RED shadow-lg font-normal h-10 w-10 items-center justify-center 
-                align-center rounded-full outline-none focus:outline-none mr-2 transition ease-in-out hover:-translate-z-1 hover:scale-125"
-                  type="button"
-                >
+                  className="bg-dark text-RED footerIcon"
+                  type="button" >
                   <i className="bi bi-twitter"></i>
                 </button>
 
                 <button
-                  className="bg-RED text-dark shadow-lg font-normal h-10 w-10 items-center
-                justify-center align-center rounded-full outline-none focus:outline-none mr-2 transition ease-in-out hover:-translate-z-1 hover:scale-125"
-                  type="button"
-                >
+                  className="bg-RED text-dark footerIcon"
+                  type="button">
                   <i className="bi bi-facebook"></i>
                 </button>
 
                 <button
-                  className="bg-dark text-RED shadow-lg font-normal h-10 w-10 items-center justify-center
-                align-center rounded-full outline-none focus:outline-none mr-2 transition ease-in-out hover:-translate-z-1 hover:scale-125"
-                  type="button"
-                >
+                  className="bg-dark text-RED footerIcon"
+                  type="button" >
                   <i className="bi bi-linkedin"></i>
                 </button>
 
                 <button
-                  className="bg-RED text-dark shadow-lg font-normal h-10 w-10 items-center justify-center
-                align-center rounded-full outline-none focus:outline-none mr-2 transition ease-in-out hover:-translate-z-1 hover:scale-125"
-                  type="button"
-                >
+                  className="bg-RED text-dark footerIcon"
+                  type="button">
                   <i className="bi bi-github"></i>
                 </button>
               </div>
@@ -72,34 +64,29 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled text-dark">
                     <li>
-                      <a
-                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-110"
-                        href=""
-                      >
+                      <a className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-105"
+                        href="" >
                         About Us
                       </a>
                     </li>
                     <li>
                       <a
-                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-110"
-                        href=""
-                      >
+                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-105"
+                        href="">
                         Blog
                       </a>
                     </li>
                     <li>
                       <a
-                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-110"
-                        href=""
-                      >
+                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-105"
+                        href="" >
                         Github
                       </a>
                     </li>
                     <li>
                       <a
-                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-110"
-                        href=""
-                      >
+                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-105"
+                        href="">
                         Free Products
                       </a>
                     </li>
@@ -112,7 +99,7 @@ export default function Footer() {
                   <ul className="list-unstyled text-dark">
                     <li>
                       <a
-                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-110"
+                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-105"
                         href=""
                       >
                         MIT License
@@ -120,7 +107,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-110"
+                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-105"
                         href=""
                       >
                         Terms &amp; Conditions
@@ -128,7 +115,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-110"
+                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-105"
                         href=""
                       >
                         Privacy Policy
@@ -136,7 +123,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-110"
+                        className="hover:text-RED block pb-2 text-sm transition ease-in-out hover:scale-105"
                         href=""
                       >
                         Contact Us

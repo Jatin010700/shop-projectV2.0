@@ -8,4 +8,12 @@ const UserState = atom({
     },
   });
 
-  export default UserState
+  const modalState = atom({
+    key: "modalState",
+    default: {
+      logInModal: false,
+      createAccountModal: false,
+    },
+  });
+
+  export { UserState, modalState };

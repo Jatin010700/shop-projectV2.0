@@ -8,7 +8,7 @@ import Preloader from "../extra/preloader";
 import { useRecoilState, useRecoilValue } from "recoil";
 import wishListState from "@/app/atoms/wishListState";
 import toast from "react-hot-toast";
-import UserState from "@/app/atoms/userState";
+import {UserState} from "@/app/atoms/userState";
 
 interface MongooseModel {
   _id: string;
@@ -95,7 +95,7 @@ export const Card = () => {
     <>
       <section className="bg-white px-4 pb-8">
         <div className="w-full flex justify-center items-center pb-4">
-          <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-4 text-dark font-bold rounded-b-full">
+          <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-2 text-dark font-bold rounded-b-full">
             New In Store
           </h1>
         </div>
@@ -105,7 +105,7 @@ export const Card = () => {
           lg:grid-cols-4 xl:grid-cols-4 gap-4 p-2"
         >
           {products.slice(0, 8).map((item: MongooseModel) => (
-            <li key={item._id} className="flex flex-col">
+            <li key={item._id} className="flex flex-col hover:scale-105 duration-150 rounded-3xl">
               {isLoading ? (
                 <Preloader
                   key={`preloader-${item._id}`}
@@ -125,23 +125,18 @@ export const Card = () => {
                     />
                     {/* Wishlist Section */}
                     <i
-                      className={`bi bi-suit-heart-fill text-2xl absolute top-5 right-5 cursor-pointer 
+                      className={`bi bi-suit-heart-fill text-2xl absolute top-4 right-5 cursor-pointer 
                       ${iconClicks[item._id] ? "text-RED" : "text-white"}`}
                       onClick={() => addItemsToWishCart(item)}></i>
                   </div>
 
-                  <div className="flex flex-col items-center gap-1 py-1">
+                  <div className="flex items-center justify-between gap-1 p-1">
                     <h2 className="text-dark text-xl font-bold uppercase">
                       {item.name}
                     </h2>
-                    <p className="font-bold text-dark text-lg">
-                      Price:
-                      <span className="text-RED">
-                        {" "}
+                    <span className="font-bold text-RED">
                         ${item.price}
-                        <i className="bi bi-tags-fill ml-1"></i>
                       </span>
-                    </p>
                   </div>
                   <Product product={item} />
                 </>

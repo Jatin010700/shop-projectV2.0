@@ -1,7 +1,7 @@
 "use client";
-import UserState from "@/app/atoms/userState";
+import {UserState} from "@/app/atoms/userState";
 import { Dropdown } from "flowbite-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -31,8 +31,8 @@ export default function ProfileMenu() {
             onClick={() => {
               setIconClick(!iconClick);
             }}
-            className={`bi bi-filter-circle-fill cursor-pointer text-3xl 
-      ${iconClick ? "text-RED" : "text-white"}`}
+            className={`bi bi-filter-circle-fill cursor-pointer text-4xl 
+                     ${iconClick ? "text-RED" : "text-white"}`}
           ></i>
         </span>
       )}
@@ -42,9 +42,10 @@ export default function ProfileMenu() {
           <>
             <Dropdown.Item className="rounded-3xl w-[340px] relative md:w-52 flex justify-center text-dark font-bold">
               <Link href="/wishlist">
-              Wishlist<span className="absolute  bg-RED px-1.5 rounded-full ml-2 text-white">
-              {wishCart.length}
-            </span>
+                Wishlist
+                <p className="absolute top-2 right-12 text-[12px] text-white">
+                  <span className="bg-RED rounded-full px-[5px] text-center">{wishCart.length}</span>
+                </p>
               </Link>
             </Dropdown.Item>
             <Dropdown.Item className=" rounded-3xl w-[340px] md:w-52 flex justify-center text-dark font-bold">

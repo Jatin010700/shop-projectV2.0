@@ -1,32 +1,37 @@
 "use client";
-
 import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
 import { useState } from "react";
-import RegisterModal from "./registerModal";
 import axios from "axios";
-import { useSetRecoilState } from "recoil";
-import UserState from "@/app/atoms/userState";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import {UserState, modalState} from "@/app/atoms/userState";
 import toast from "react-hot-toast";
 import Preloader from "../extra/preloader";
 
-
 export default function LoginModal() {
-  const [openModal, setOpenModal] = useState(false);
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
-
   const [showPassword, setShowPassword] = useState(false);
   const [iconClick, setIconClick] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const setUserState = useSetRecoilState(UserState);
+  const [modal, setModal] = useRecoilState(modalState);
 
   function onCloseModal() {
-    setOpenModal(false);
     setUserName("");
     setPassword("");
-  }
 
+    setModal({
+      logInModal: false,
+      createAccountModal: false,
+    });
+  };
+
+  const openCreateAccountModal = () => {
+    setModal({
+      logInModal: false,
+      createAccountModal: true,
+    });
+  };
   const handleLogin = async () => {
     try {
       setIsLoading(true);
@@ -62,40 +67,31 @@ export default function LoginModal() {
           borderRadius: "100px",
         },
       });
-      console.error("Error during login:", error);
       setIsLoading(false);
     }
   };
+
   return (
     <>
-      <Button
-        onClick={() => setOpenModal(true)}
-        className="rounded-full bg-RED !border-none focus:ring-0  font-bold shadow-xl hover:scale-110 duration-150"
-      >
-        LOGIN
-      </Button>
       <Modal
         dismissible
-        show={openModal}
+        show={modal.logInModal}
         size="md"
         onClose={onCloseModal}
-        popup
-      >
-        <div className="text-dark flex justify-end px-6 pt-6">
-          <button onClick={onCloseModal}>
-            <i className="bi bi-x-circle-fill text-2xl hover:text-RED scale-105 duration-150"></i>
-          </button>
-        </div>
+        popup>
         <Modal.Body>
-          <div className="space-y-6">
+          <div className="text-xl text-RED font-bold space-y-6 pt-6 relative">
             <h3 className="text-xl text-RED font-bold">
               Sign in to our platform
             </h3>
+            <button onClick={onCloseModal} className="text-dark absolute top-0 right-0">
+              <i className="bi bi-x-circle-fill text-2xl hover:text-RED scale-105 duration-150"></i>
+            </button>
             <div>
               <div className="mb-2 block">
                 <Label
                   htmlFor="email"
-                  value="Your Username:"
+                  value="Username"
                   className="font-bold"
                 />
               </div>
@@ -103,23 +99,22 @@ export default function LoginModal() {
                 type="text"
                 value={username}
                 className="w-full rounded-full text-dark text-sm border-1 focus:border-RED focus:ring-0"
-                placeholder="Username"
                 onChange={(e) => setUserName(e.target.value)}
                 required
               />
             </div>
-            <div>
+            <div className="mt-2">
               <div className="mb-2 block">
                 <Label
                   htmlFor="password"
-                  value="Your password:"
+                  value="Password"
                   className="font-bold"
                 />
               </div>
               <div className="relative flex items-center">
                 <input
                   type={showPassword ? "text" : "password"}
-                  className="w-full rounded-full text-dark text-sm border-1 focus:border-RED focus:ring-0"
+                  className="placeholder:translate-y-0.5 w-full rounded-full text-dark text-sm border-1 focus:border-RED focus:ring-0"
                   placeholder="********"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -150,7 +145,7 @@ export default function LoginModal() {
                 href="#"
                 className="text-sm text-RED font-bold hover:underline dark:text-cyan-500"
               >
-                Lost Password?
+                Forgot Password?
               </a>
             </div>
             <div className="w-full flex justify-center">
@@ -161,20 +156,25 @@ export default function LoginModal() {
               >
                 {isLoading ? (
                   <Preloader
-                    preloaderSize="20"
+                    preloaderSize="14"
                     preloaderColor="#ffffff"
                     className=""
                   />
                 ) : (
-                  "Log In to your Account"
+                  "LOG IN"
                 )}
               </Button>
             </div>
-            <p className="font-bold text-RED"><span className="text-dark">Account detail:</span>Test, 123</p>
+            <p className="font-bold text-RED text-sm">
+              <span className=" text-dark">Test Account:</span>Test, 123
+            </p>
             <div className="flex justify-between items-center text-sm text-dark font-bold">
-              Not registered?&nbsp;
-              {/* register modal button */}
-              <RegisterModal />
+              Not registered?
+              <Button
+                onClick={openCreateAccountModal}
+                className="rounded-full bg-RED border-1 border-RED font-bold shadow-xl hover:scale-110 duration-150">
+                Create Account
+              </Button>
             </div>
           </div>
         </Modal.Body>

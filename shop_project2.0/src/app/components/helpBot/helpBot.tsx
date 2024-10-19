@@ -1,5 +1,5 @@
 "use client";
-import UserState from "@/app/atoms/userState";
+import {UserState} from "@/app/atoms/userState";
 import axios from "axios";
 import { Modal } from "flowbite-react";
 import { useState } from "react";
@@ -61,7 +61,6 @@ export const HelpBot: React.FC = () => {
               <div>
                 <div className="h-80 overflow-auto">
                   {messages.map((message, index) => (
-                    
                     <p
                       key={index}
                       className={`text-dark m-2 p-2 !ml-4

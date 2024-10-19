@@ -41,22 +41,22 @@ const CheckoutPage = () => {
       <div className="h-1 w-full bg-RED" />
 
       <div className="w-full bg-white flex justify-center items-center pb-4">
-        <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-4 text-dark font-bold rounded-b-full">
-          Checkout
+        <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-2 text-dark font-bold rounded-b-full">
+          Confirm your order
         </h1>
       </div>
       <div className="bg-white font-bold px-2">
         <div
-          className="bg-RED text-dark p-2 rounded-tl-3xl rounded-tr-3xl
+          className="bg-RED text-dark p-0.5 rounded-tl-[5rem] rounded-tr-[5rem]
       flex items-center justify-between md:flex-row md:justify-evenly w-full md:w-3/4 ml-0 md:ml-[10.8em]"
         >
-          <h2 className="ml-2 md:ml-0 ">Products</h2>
+          <h2 className="ml-2 md:ml-0 ">Product</h2>
           <div className="w-0.5 bg-dark  h-5 rounded-full mx-2 my-2" />
-          <h2 className="ml-2 md:ml-0">Names</h2>
+          <h2 className="ml-2 md:ml-0">Reference</h2>
           <div className="w-0.5 bg-dark  h-5 rounded-full mx-2 my-2" />
-          <h2 className="ml-2 md:ml-0">Quantities</h2>
+          <h2 className="ml-2 md:ml-0">Qty</h2>
           <div className="w-0.5 bg-dark h-5 rounded-full mx-2 my-2" />
-          <h2 className="ml-2 md:ml-0">Prices</h2>
+          <h2 className="ml-2 md:ml-0">Price</h2>
         </div>
       </div>
       <div
@@ -86,7 +86,7 @@ const CheckoutPage = () => {
 
         {cartItem.length > 0 && (
           <div
-            className="flex flex-col items-center md:items-end w-3/4 h-80 
+            className="flex flex-col items-center md:items-end w-3/4 
           text-center mx-auto mt-4 py-2 px-6"
           >
             <h2 className="text-center text-3xl font-bold">

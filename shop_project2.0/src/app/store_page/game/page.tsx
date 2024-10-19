@@ -8,7 +8,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import SearchState from "@/app/atoms/searchState";
 import { NumberPages } from "./numberOfPages";
 import wishListState from "@/app/atoms/wishListState";
-import UserState from "@/app/atoms/userState";
+import {UserState} from "@/app/atoms/userState";
 import toast from "react-hot-toast";
 import { cartState } from "@/app/atoms/cartState";
 
@@ -19,10 +19,6 @@ interface StoreModel {
   image: string;
   quantity: number;
 }
-
-// type StoreProps = {
-//   product: StoreModel[];
-// };
 
 const GamePage = () => {
   const [products, setProducts] = useState<StoreModel[]>([]);
@@ -117,10 +113,8 @@ const GamePage = () => {
       },
     });
   };
-//-------------------------//
 
 //add to shop cart
-
 const addItemsToCart = (product: StoreModel) => {
   if (!isLoggedIn) {
     toast.error(`Please Log In!`, {
@@ -151,38 +145,34 @@ const addItemsToCart = (product: StoreModel) => {
     },
   });
 };
-//-------------------------//
+
   return (
     <>
       <SearchInputDiv />
-
       <section className="bg-white px-4 pb-4">
         <div className="w-full flex justify-center items-center pb-4">
-          <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-4 text-dark font-bold rounded-b-full">
+          <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-2 text-dark font-bold rounded-b-full">
             What&apos;s in Store
           </h1>
         </div>
-        {currentItems.length > 0 ? (
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
-          lg:grid-cols-4 xl:grid-cols-4 gap-4 p-2"
-          >
+        {currentItems.length > 0 ? 
+        (<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 p-2">
             {currentItems.map((item: StoreModel) => (
               <>
-              {isLoading ? ( <Preloader 
-              preloaderSize="30"
-              preloaderColor="#ff3333" 
-              className="flex justify-center items-center"/>) : (
-              <>
-              <div key={item._id} className="shadow-xl rounded-3xl relative">
-                {/* wishlist  buttom */}
-                  <i
-                    className={`bi bi-suit-heart-fill text-2xl ml-2 bg-dark  px-[9px] py-1
-                         rounded-tr-3xl rounded-bl-3xl absolute right-0 top-0 shadow-xl cursor-pointer 
-                         ${iconClicks[item._id] ? "text-RED" : "text-white"}`}
-                    onClick={() => addItemsToWishCart(item)}></i>
+              {isLoading ? 
+              (<Preloader 
+                preloaderSize="30"
+                preloaderColor="#ff3333" 
+                className="flex justify-center items-center"/>) : (
+                  <>
+                  <div key={item._id} className="shadow-xl rounded-3xl border-1 border-dark relative">
+                    {/* wishlist  buttom */}
+                      <i className={`bi bi-suit-heart-fill text-2xl ml-2 bg-dark  px-[9px] py-1
+                        rounded-tr-3xl rounded-bl-3xl absolute right-0 top-0 shadow-xl cursor-pointer 
+                        ${iconClicks[item._id] ? "text-RED" : "text-white"}`}
+                        onClick={() => addItemsToWishCart(item)}></i>
 
-                <div className="flex flex-col items-center gap-1 py-1">
+                <div className="flex flex-col items-center gap-1 py-2">
                   <Image
                     src={item.image}
                     alt=""
@@ -190,16 +180,12 @@ const addItemsToCart = (product: StoreModel) => {
                     height={100}
                     className="w-3/4"
                   />
-                  <h2 className="text-dark text-xl p-2 font-bold uppercase">
+                  <h2 className="text-dark text-xl px-2 pt-2 font-bold uppercase">
                     {item.name}
                   </h2>
-
                   <p className="font-bold text-dark text-lg">
-                    Price:
-                    <span className="text-RED">
-                      {" "}
+                    Price: <span className="text-RED">
                       ${item.price}
-                      <i className="bi bi-tags-fill ml-1"></i>
                     </span>
                   </p>
 
@@ -208,7 +194,7 @@ const addItemsToCart = (product: StoreModel) => {
                   !border-none focus:ring-0  hover:scale-105 duration-150 w-3/4 p-2"
                   onClick={() =>addItemsToCart(item)}>
                     Add to Cart
-                    <i className="bi bi-bag-plus-fill ml-1"></i>
+                    <i className="bi bi-bag-plus-fill ml-1 text-RED"></i>
                   </button>
                 </div>
               </div>

@@ -6,7 +6,6 @@ import SearchState from "../atoms/searchState";
 import ShopStore from "./storeMainPage";
 import GamePage from "./game/page";
 
-
 export default function StoreMain() {
   const searchString = useRecoilValue(SearchState).searchString;
 
@@ -17,5 +16,3 @@ export default function StoreMain() {
     </>
   );
 }
-
-//Some Issues with searchInput need to be Fix

@@ -1,8 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import SearchInputDiv from "./game/searchDiv";
 
 type listProps = {
   classDiv: string;
@@ -10,21 +9,14 @@ type listProps = {
 };
 
 const List = ({ classDiv, classGrid }: listProps) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  
   return (
     <>
       <div className="bg-white grid grid-cols-3 gap-2 md:py-4 p-4 w-full md:w-11/12 h-auto">
-        <div
-          className={`col-span-2 row-span-2 w-full h-48 md:h-96 lg:h-full ${classGrid}  hover:!scale-[1.01]`}
-        >
+        <Link href="/store_page/game" className={`col-span-2 row-span-2 w-full h-48 md:h-96 lg:h-full ${classGrid}  hover:!scale-[1.01]`}>
           <div className={`top-2/4 left-[55%] ${classDiv}`}>
-            <Link
-              href="/store_page/game"
-              className="text-white hover:!text-RED !text-4xl md:!text-6xl"
-            >
+            <p className="text-white hover:!text-RED !text-4xl md:!text-6xl">
               WHAT&apos;S IN STORE
-            </Link>
+            </p>
           </div>
           <Image
             src="/assets/gaming.jpg"
@@ -33,15 +25,14 @@ const List = ({ classDiv, classGrid }: listProps) => {
             width={100}
             height={100}
           />
-        </div>
+        </Link>
 
-        <div className={`row-span-4 ${classGrid} hover:!scale-[1.01]`}>
+        <Link href="/store_page/game" className={`row-span-4 ${classGrid} hover:!scale-[1.01]`}>
           <div className={`top-2/4 left-[55%] ${classDiv}`}>
-            <Link href="/store_page/game" className="storeText">
+            <p className="storeText">
               HEADSET
-            </Link>
+            </p>
           </div>
-
           <Image
             src="/assets/headset1.jpg"
             className="storeImg"
@@ -49,13 +40,13 @@ const List = ({ classDiv, classGrid }: listProps) => {
             width={100}
             height={100}
           />
-        </div>
+        </Link>
 
-        <div className={`row-span-3 ${classGrid}`}>
+        <Link href="/store_page/game" className={`row-span-3 ${classGrid}`}>
           <div className={`top-2/4 left-3/4 ${classDiv}`}>
-            <Link href="/store_page/game" className="storeText">
+            <p className="storeText">
               PC
-            </Link>
+            </p>
           </div>
           <Image
             src="/assets/tech1.jpg"
@@ -64,13 +55,13 @@ const List = ({ classDiv, classGrid }: listProps) => {
             width={100}
             height={100}
           />
-        </div>
+        </Link>
 
-        <div className={`row-span-2 ${classGrid}`}>
+        <Link href="/store_page/game" className={`row-span-2 ${classGrid}`}>
           <div className={`top-2/4 left-[62%] ${classDiv}`}>
-            <Link href="/store_page/game" className="storeText">
+            <p className="storeText">
               MOUSE
-            </Link>
+            </p>
           </div>
           <Image
             src="/assets/mouse.jpg"
@@ -79,13 +70,13 @@ const List = ({ classDiv, classGrid }: listProps) => {
             width={100}
             height={100}
           />
-        </div>
+        </Link>
 
-        <div className={classGrid}>
+        <Link href="/store_page/game" className={classGrid}>
           <div className={`top-2/4 left-1/2 ${classDiv}`}>
-            <Link href="/store_page/game" className="storeText">
+            <p className="storeText">
               KEYBOARD
-            </Link>
+            </p>
           </div>
           <Image
             src="/assets/keyboard.jpg"
@@ -94,13 +85,13 @@ const List = ({ classDiv, classGrid }: listProps) => {
             width={100}
             height={100}
           />
-        </div>
+        </Link>
 
-        <div className={classGrid}>
+        <Link href="/store_page/game" className={classGrid}>
           <div className={`top-2/4 left-[65%] ${classDiv}`}>
-            <Link href="/store_page/game" className="storeText">
+            <p className="storeText">
               GAME
-            </Link>
+            </p>
           </div>
           <Image
             src="/assets/game1.jpg"
@@ -109,7 +100,7 @@ const List = ({ classDiv, classGrid }: listProps) => {
             width={100}
             height={100}
           />
-        </div>
+        </Link>
       </div>
     </>
   );
