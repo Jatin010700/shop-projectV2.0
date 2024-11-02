@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={poppin.className}>
       <Flowbite theme={{ theme: customTheme }}>
         <RecoilRootWrapper>
-          <Toaster position="top-center" />
+          <Toaster position="bottom-center" />
           <Navbar/>
             {children}
           <Footer/>

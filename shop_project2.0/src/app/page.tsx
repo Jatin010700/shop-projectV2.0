@@ -1,3 +1,4 @@
+import React from "react";
 import { Card } from "./components/cardContent/frontPageContent";
 import Header from "./components/main";
 import Review from "./components/review";

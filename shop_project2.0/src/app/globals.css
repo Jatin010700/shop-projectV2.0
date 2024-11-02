@@ -68,8 +68,30 @@ body {
   width: 100%;
 }
 
+.mobileDropdown {
+  border-radius: 0 0 1.5rem 1.5rem!important;
+}
+
+div[data-testid="flowbite-dropdown"] > ul {
+  padding-top: 0!important;
+  padding-left: 0.25rem!important;
+  padding-right: 0.25rem!important;
+}
+
+li[role="menuitem"] {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .closeIconModalProd {
     top: 0;
+  }
+
+  .hideNavMenu {
+    display: none;
+  }
+
+  div[data-testid="flowbite-dropdown"] {
+    transform: translate(0px, 56px)!important;
   }
 }
