@@ -57,7 +57,7 @@ body {
       @apply rounded-3xl w-full h-full
   }
   .storeText {
-      @apply text-white font-bold sm:text-2xl md:text-4xl lg:text-6xl hover:text-RED  duration-150
+      @apply text-white font-bold text-4xl lg:text-6xl hover:text-RED  duration-150
   }
   .footerIcon {
       @apply shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2 transition ease-in-out hover:scale-110

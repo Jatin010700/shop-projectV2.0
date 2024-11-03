@@ -11,9 +11,9 @@ type listProps = {
 const List = ({ classDiv, classGrid }: listProps) => {
   return (
     <>
-      <div className="bg-white grid grid-cols-3 gap-2 md:py-4 p-4 w-full md:w-11/12 h-auto">
+      <div className="bg-white flex flex-col md:grid grid-cols-3 gap-2 md:py-4 p-4 w-full md:w-11/12 h-auto">
         <Link href="/store_page/game" className={`col-span-2 row-span-2 w-full h-48 md:h-96 lg:h-full ${classGrid}  hover:!scale-[1.01]`}>
-          <div className={`top-2/4 left-[55%] ${classDiv}`}>
+          <div className={`top-[45%] text-center ${classDiv}`}>
             <p className="text-white hover:!text-RED !text-4xl md:!text-6xl">
               WHAT&apos;S IN STORE
             </p>
@@ -27,8 +27,8 @@ const List = ({ classDiv, classGrid }: listProps) => {
           />
         </Link>
 
-        <Link href="/store_page/game" className={`row-span-4 ${classGrid} hover:!scale-[1.01]`}>
-          <div className={`top-2/4 left-[55%] ${classDiv}`}>
+        <Link href="/store_page/game" className={`row-span-4 h-80 md:h-auto ${classGrid} hover:!scale-[1.01]`}>
+          <div className={`top-[40%] ${classDiv}`}>
             <p className="storeText">
               HEADSET
             </p>
@@ -42,8 +42,8 @@ const List = ({ classDiv, classGrid }: listProps) => {
           />
         </Link>
 
-        <Link href="/store_page/game" className={`row-span-3 ${classGrid}`}>
-          <div className={`top-2/4 left-3/4 ${classDiv}`}>
+        <Link href="/store_page/game" className={`row-span-3 h-80 md:h-auto  ${classGrid}`}>
+          <div className={`top-[40%] ${classDiv}`}>
             <p className="storeText">
               PC
             </p>
@@ -58,7 +58,7 @@ const List = ({ classDiv, classGrid }: listProps) => {
         </Link>
 
         <Link href="/store_page/game" className={`row-span-2 ${classGrid}`}>
-          <div className={`top-2/4 left-[62%] ${classDiv}`}>
+          <div className={`top-[40%] ${classDiv}`}>
             <p className="storeText">
               MOUSE
             </p>
@@ -73,7 +73,7 @@ const List = ({ classDiv, classGrid }: listProps) => {
         </Link>
 
         <Link href="/store_page/game" className={classGrid}>
-          <div className={`top-2/4 left-1/2 ${classDiv}`}>
+          <div className={`top-[40%] ${classDiv}`}>
             <p className="storeText">
               KEYBOARD
             </p>
@@ -88,7 +88,7 @@ const List = ({ classDiv, classGrid }: listProps) => {
         </Link>
 
         <Link href="/store_page/game" className={classGrid}>
-          <div className={`top-2/4 left-[65%] ${classDiv}`}>
+          <div className={`top-[40%] ${classDiv}`}>
             <p className="storeText">
               GAME
             </p>
@@ -111,7 +111,7 @@ export default function ShopStore() {
     <>
       <div className="bg-white flex flex-col justify-center items-center font-bold">
         <List
-          classDiv="absolute w-3/4 transform -translate-x-1/2 -translate-y-1/2"
+          classDiv="absolute w-full text-center"
           classGrid=" w-full relative hover:scale-[1.03] duration-150"
         />
       </div>
