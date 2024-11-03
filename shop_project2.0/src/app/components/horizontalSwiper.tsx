@@ -37,7 +37,7 @@ export default function HeaderHorizontal() {
           title: "Limited edition",
           subtitle: "Games of the year",
           price: "Elden Ring ~ ",
-          paraText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque ..",
+          paraText: "Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque ..",
           button: (
             <Link href="/store_page/game">
               Game Store <i className="bi bi-arrow-left-circle-fill"></i>
