@@ -94,4 +94,8 @@ li[role="menuitem"] {
   div[data-testid="flowbite-dropdown"] {
     transform: translate(0px, 56px)!important;
   }
+
+  .checkoutHideMobile {
+    display: none;
+  }
 }

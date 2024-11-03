@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { AnimatedText } from "./extra/animatedText";
+import Link from "next/link";
 
 export default function HeaderHorizontal() {
 
@@ -16,9 +17,9 @@ export default function HeaderHorizontal() {
           price: "Somekind of mouse ~ ",
           paraText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque ..",
           button: (
-            <button className="shadow-xl p-2 rounded-full font-bold bg-RED hover:scale-110 duration-150 mt-4 md:mt-0">
-              Go to Store <i className="bi bi-arrow-left-circle-fill"></i>
-            </button>
+            <Link href="/store_page">
+              Go to Store <i className="bi bi-arrow-left-circle-fill text-white"></i>
+            </Link>
           ),
         },
         {
@@ -26,6 +27,11 @@ export default function HeaderHorizontal() {
           subtitle: "Keyboard",
           price: "Somekind of keyboard ~ ",
           paraText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque ..",
+          button: (
+            <Link href="/store_page/game">
+              Game Store <i className="bi bi-arrow-left-circle-fill"></i>
+            </Link>
+          ),
         },
         {
           title: "Limited edition",
@@ -33,9 +39,9 @@ export default function HeaderHorizontal() {
           price: "Elden Ring ~ ",
           paraText: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque ..",
           button: (
-            <button className="shadow-xl p-2 rounded-full font-bold bg-RED hover:scale-110 duration-150 mt-4 md:mt-0">
+            <Link href="/store_page/game">
               Game Store <i className="bi bi-arrow-left-circle-fill"></i>
-            </button>
+            </Link>
           ),
         },
       ];
@@ -61,20 +67,21 @@ export default function HeaderHorizontal() {
                 className="mySwiper bg-dark">
                     {HeaderArray.map((item, index) => (
                     <SwiperSlide key={index} className="w-full bg-dark">
-                        <div className="p-10 md:mt-16">
-                        <AnimatedText text={item.title} className="!text-6xl" />
+                        <div className="p-10 pb-0 md:mt-16">
+                        <AnimatedText text={item.title} className="md:!text-6xl !mb-0" />
                             <div className="w-full">
                                 <h1 className="text-2xl text-RED font-bold">
                                     {item.subtitle}
                                 </h1>
-                                <h2 className="text-xl font-bold">
-                                    {item.price}<span className="text-RED text-2xl">$FREE
-                                </span>
+                                <h2 className="text-xl font-bold text-white">
+                                    {item.price}<span className="text-RED text-2xl">$FREE</span>
                                 </h2>
-                                <p className="py-2 text-justify">
+                                <p className="py-2 text-justify text-white">
                                     {item.paraText}
                                 </p>
-                                {item.button}
+                                <button className="shadow-xl p-2 rounded-full font-bold bg-RED hover:scale-110 duration-150 mt-4 md:mt-0">
+                                  {item.button}
+                                </button>
                             </div>
                         </div>
                     </SwiperSlide>

@@ -42,7 +42,7 @@ export default function HeaderVertical() {
                 className="mySwiper bg-dark h-[20rem] md:h-[33rem]">
                 {HeaderImageArray.map((item, index) => (
                     <SwiperSlide key={index} className="w-full bg-dark">
-                            <div className="p-10 md:mt-20">
+                            <div className="p-10 pt-4 md:mt-20">
                                 <Image
                                     src={item.image}
                                     alt=""

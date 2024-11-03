@@ -75,7 +75,7 @@ export default function Navbar() {
                 <span className="bg-RED rounded-full px-[5px] text-center">{cartTotalQuantity}</span>
               </p>
             </Link>
-            <Link href="/checkoutPage" className="relative lg:hidden">
+            <Link href="/" className="relative lg:hidden">
               <i className="bi bi-suit-heart-fill 
                  cursor-pointer text-4xl hover:text-RED scale-105 duration-150">
               </i>

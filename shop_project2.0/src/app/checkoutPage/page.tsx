@@ -41,15 +41,14 @@ const CheckoutPage = () => {
       <div className="h-1 w-full bg-RED" />
 
       <div className="w-full bg-white flex justify-center items-center pb-4">
-        <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-2 text-dark font-bold rounded-b-full">
+        <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED md:p-2 pb-2 text-dark font-bold rounded-b-full">
           Confirm your order
         </h1>
       </div>
-      <div className="bg-white font-bold px-2">
+      <div className="bg-white font-bold px-2 border-b-2 border-RED checkoutHideMobile">
         <div
           className="bg-RED text-dark p-0.5 rounded-tl-[5rem] rounded-tr-[5rem]
-      flex items-center justify-between md:flex-row md:justify-evenly w-full md:w-3/4 ml-0 md:ml-[10.8em]"
-        >
+                      flex items-center justify-between md:flex-row md:justify-evenly w-full md:w-3/4 ml-0 md:ml-[10.8em]">
           <h2 className="ml-2 md:ml-0 ">Product</h2>
           <div className="w-0.5 bg-dark  h-5 rounded-full mx-2 my-2" />
           <h2 className="ml-2 md:ml-0">Reference</h2>
@@ -59,10 +58,7 @@ const CheckoutPage = () => {
           <h2 className="ml-2 md:ml-0">Price</h2>
         </div>
       </div>
-      <div
-        className="bg-white text-dark h-full flex flex-wrap gap-2 p-2 justify-center
-       border-t-2 border-RED"
-      >
+      <div className="bg-white text-dark h-full flex flex-wrap gap-2 p-2 justify-center">
         {cartItem.length <= 0 ? (
           <div className="flex items-center justify-center w-full">
             <h1
