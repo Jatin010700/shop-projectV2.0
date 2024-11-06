@@ -121,16 +121,16 @@ export const Card = () => {
                       alt=""
                       width={100}
                       height={100}
-                      className="w-full rounded-3xl"
+                      className="w-full rounded-t-3xl "
                     />
                     {/* Wishlist Section */}
                     <i
                       className={`bi bi-suit-heart-fill text-2xl absolute top-4 right-5 cursor-pointer 
-                      ${iconClicks[item._id] ? "text-RED" : "text-white"}`}
+                      ${!isLoggedIn || !iconClicks[item._id] ? "text-white" : "text-RED"}`}
                       onClick={() => addItemsToWishCart(item)}></i>
                   </div>
 
-                  <div className="flex items-center justify-between gap-1 p-1">
+                  <div className="flex items-center justify-between gap-1 p-1 px-4">
                     <h2 className="text-dark text-xl font-bold uppercase">
                       {item.name}
                     </h2>

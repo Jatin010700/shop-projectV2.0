@@ -20,21 +20,22 @@
 }
 /* Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  display: none;
+  /*width: 8px;  Width of the scrollbar */
 }
 
-::-webkit-scrollbar-track {
-  background-color: #212529; /* Background color of the track */
+/* ::-webkit-scrollbar-track {
+  background-color: #212529;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ff3333; /* Color of the scrollbar thumb */
+  background-color: #ff3333; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #ff3333; /* Color of the scrollbar thumb on hover */
-}
+  background-color: #ff3333; 
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -98,4 +99,15 @@ li[role="menuitem"] {
   .checkoutHideMobile {
     display: none;
   }
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ff3333;
+  transform-origin: 0%;
+  z-index: 999;
 }

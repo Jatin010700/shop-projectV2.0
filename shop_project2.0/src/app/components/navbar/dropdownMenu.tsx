@@ -26,13 +26,10 @@ export default function ProfileMenu() {
       className="rounded-3xl w-full md:w-2/12"
       renderTrigger={() => (
         <span>
-          <i
-            onClick={() => {
-              setIconClick(!iconClick);
-            }}
-            className={`bi bi-filter-circle-fill cursor-pointer text-4xl hideNavMenu 
-                     ${iconClick ? "text-RED" : "text-white"}`}
-          ></i>
+          <i onClick={() => {setIconClick(!iconClick);}}
+            className={`bi bi-filter-circle-fill cursor-pointer ml-[3.5rem] text-4xl hideNavMenu 
+                     ${iconClick ? "text-RED" : "text-white"}`}>
+          </i>
         </span>
       )}
     >
@@ -52,7 +49,7 @@ export default function ProfileMenu() {
             </Dropdown.Item>
             <Dropdown.Item 
             onClick={handleLogout}
-            className=" bg-RED hover:!bg-dark duration-150 hover:scale-105 text-white font-bold rounded-3xl w-full flex justify-center">
+            className=" bg-RED hover:!bg-dark duration-150 text-white font-bold rounded-3xl w-full flex justify-center">
               Log Out
             </Dropdown.Item>
           </>

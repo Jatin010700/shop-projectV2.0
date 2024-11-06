@@ -57,7 +57,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   return (
     <>
       <Button 
-      className="bg-dark rounded-full font-bold !border-none focus:ring-0 hover:scale-105 duration-150"
+      className="bg-dark rounded-b-3xl rounded-t-none font-bold !border-none focus:ring-0 duration-150"
       onClick={() => setOpenModal(true)} >
         View More
       </Button>

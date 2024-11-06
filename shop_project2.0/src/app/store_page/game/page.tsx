@@ -169,7 +169,7 @@ const addItemsToCart = (product: StoreModel) => {
                     {/* wishlist  buttom */}
                       <i className={`bi bi-suit-heart-fill text-2xl ml-2 bg-dark  px-[9px] py-1
                         rounded-tr-3xl rounded-bl-3xl absolute right-0 top-0 shadow-xl cursor-pointer 
-                        ${iconClicks[item._id] ? "text-RED" : "text-white"}`}
+                        ${!isLoggedIn || !iconClicks[item._id] ? "text-white" : "text-RED"}`}
                         onClick={() => addItemsToWishCart(item)}></i>
 
                 <div className="flex flex-col items-center gap-1 py-2">

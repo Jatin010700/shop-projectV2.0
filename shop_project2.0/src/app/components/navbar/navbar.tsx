@@ -8,6 +8,7 @@ import { cartState } from "@/app/atoms/cartState";
 import wishListState from "@/app/atoms/wishListState";
 import AuthModalContainer from "../user_account/authModal";
 import MobileDropdownMenu from "./mobileDropdown";
+import ScrollPage from "@/app/scrollPage";
 
 
 type navbarProps = {
@@ -52,6 +53,7 @@ export default function Navbar() {
 
   return (
     <>
+    <ScrollPage/>
       <div className="bg-dark text-white w-full px-4 pt-2 md:pt-0 flex flex-row items-center justify-between">
         <Link href="/" className="text-xl font-bold ">
           Tech<span className="text-RED text-2xl">Shop</span>

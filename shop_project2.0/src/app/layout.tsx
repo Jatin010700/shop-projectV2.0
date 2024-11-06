@@ -6,7 +6,6 @@ import Footer from "./components/footer";
 import RecoilRootWrapper from "./recoilRootWrapper";
 import { Toaster } from "react-hot-toast";
 import { CustomFlowbiteTheme, Flowbite } from "flowbite-react";
-import { HelpBot } from "./components/helpBot/helpBot";
 
 const poppin = Poppins({ 
   weight: '400',
@@ -16,7 +15,7 @@ const poppin = Poppins({
 const customTheme: CustomFlowbiteTheme = {
   modal: {
       content: {
-          "inner": "rounded-3xl bg-white"
+          "inner": "rounded-2xl bg-white"
       }
   }
 }
@@ -34,15 +33,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppin.className}>
-      <Flowbite theme={{ theme: customTheme }}>
-        <RecoilRootWrapper>
-          <Toaster position="bottom-center" />
-          <Navbar/>
-            {children}
-          <Footer/>
-        </RecoilRootWrapper>
+        <Flowbite theme={{ theme: customTheme }}>
+          <RecoilRootWrapper>
+            <Toaster position="bottom-center" />
+            <Navbar/>
+              {children}
+            <Footer/>
+          </RecoilRootWrapper>
         </Flowbite>
-        </body>
+      </body>
     </html>
   );
 }
