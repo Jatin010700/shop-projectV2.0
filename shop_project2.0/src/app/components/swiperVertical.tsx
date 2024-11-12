@@ -39,9 +39,9 @@ export default function HeaderVertical() {
                   },
                 }}
                 modules={[Autoplay, Pagination, Navigation, EffectCreative]}
-                className="mySwiper bg-dark h-[20rem] md:h-[33rem]">
+                className="mySwiper bg-dark h-[20rem] md:h-[33rem] !-z-50">
                 {HeaderImageArray.map((item, index) => (
-                    <SwiperSlide key={index} className="w-full bg-dark">
+                    <SwiperSlide key={index} className="w-full bg-dark ">
                             <div className="p-10 pt-4 md:mt-20">
                                 <Image
                                     src={item.image}

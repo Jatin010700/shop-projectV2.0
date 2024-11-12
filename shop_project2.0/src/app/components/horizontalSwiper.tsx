@@ -64,7 +64,7 @@ export default function HeaderHorizontal() {
                     },
                   }}
                 modules={[Autoplay, Pagination, Navigation, EffectCreative]}
-                className="mySwiper bg-dark">
+                className="mySwiper bg-dark !-z-50">
                     {HeaderArray.map((item, index) => (
                     <SwiperSlide key={index} className="w-full bg-dark">
                         <div className="p-10 pb-0 md:mt-16">
