@@ -41,7 +41,7 @@ export default function ProfileMenu() {
         className={`bi bi-filter-circle-fill text-4xl ${iconClick ? "text-RED" : "text-white"}`}></i>
       </button>
       {isOpen && (
-        <div className="bg-dark/75 h-screen !z-50 w-screen fixed bottom-0 left-0"
+        <div className="h-screen !z-50 w-screen fixed bottom-0 left-0"
         onClick={toggleAccountMenu}>
         <div className="fixed top-16 right-5  p-2 rounded-3xl h-auto w-64 bg-white "
         onClick={(e) => e.stopPropagation()}>
