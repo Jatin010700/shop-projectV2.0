@@ -32,50 +32,50 @@ export default function ProfileMenu() {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="hidden md:flex justify-center items-center">
       <button
-        className="font-bold hover:text-RED transition ease-in-out hover:-translate-z-1 hover:scale-125"
+        className="font-bold hover:text-RED"
         onClick={toggleMenu}>
         <i 
         onClick={() => {setIconClick(!iconClick);}}
-        className={`bi bi-filter-circle-fill text-4xl ${iconClick ? "text-RED" : "text-white"}`}></i>
+        className={`bi bi-filter-circle-fill text-4xl ${iconClick ? "text-RED" : "text-white"} button`}></i>
       </button>
       {isOpen && (
-        <div className="h-screen !z-50 w-screen fixed bottom-0 left-0"
+        <div className="h-screen !z-50 w-screen fixed bottom-0 left-0 hideNavMenu"
         onClick={toggleAccountMenu}>
-        <div className="fixed top-16 right-5  p-2 rounded-3xl h-auto w-64 bg-white "
+        <div className="fixed top-16 right-5 p-2 rounded-3xl h-auto w-64 bg-white shadow-xl"
         onClick={(e) => e.stopPropagation()}>
           <div className="flex flex-col items-center gap-2">
                 <ul className="flex flex-col gap-2 w-full items-center">
                 {isLoggedIn ? (
                   <>
-                  <Link href="/wishlist" className="rounded-3xl w-full flex text-dark justify-center hover:bg-dark/5 relative py-1">
+                  <Link href="/wishlist" className="default-navMenu relative py-1">
                     Wishlist
                     <p className="absolute top-2 right-12 text-[12px] text-white font-bold">
                       <span className="bg-RED rounded-full px-[5px] text-center">{wishCart.length}</span>
                     </p>
                   </Link>
-                  <li className="rounded-3xl w-full flex justify-center text-dark hover:bg-dark/5 py-1">
+                  <Link href="/" className="default-navMenu">
                     Earnings
-                  </li>
-                  <li className="rounded-3xl flex justify-center text-dark hover:bg-dark/5 py-1 w-full">
+                  </Link>
+                  <Link href="/" className="default-navMenu">
                     Settings
-                  </li>
+                  </Link>
                     <button
                     onClick={handleLogout}
-                    className=" bg-RED py-1 hover:!bg-dark duration-150 text-white font-bold rounded-3xl w-full flex justify-center">
+                    className=" bg-RED default-navMenu hover:bg-RED text-white font-bold">
                       Log Out
                     </button>
                   </>
                 ) : (
                   <>
-                  <Link href="/wishlist" className="rounded-3xl w-full flex text-dark justify-center hover:bg-dark/5 relative py-1">
+                  <li className="default-navMenu">
                     Dashboard
-                  </Link>
-                  <li className="rounded-3xl w-full flex justify-center text-dark hover:bg-dark/5 py-1">
+                  </li>
+                  <li className="default-navMenu">
                     Earnings
                   </li>
-                  <li className="rounded-3xl flex justify-center text-dark hover:bg-dark/5 py-1 w-full">
+                  <li className="default-navMenu">
                     Settings
                   </li>
                   </>

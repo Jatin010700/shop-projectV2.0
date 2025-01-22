@@ -18,7 +18,7 @@ export default function AuthModalContainer() {
       <>
         <Button
           onClick={openLoginModal}
-          className="rounded-full bg-RED !border-none focus:ring-0 font-bold shadow-xl hover:scale-110 duration-150 absolute right-20">
+          className="rounded-full bg-RED !border-none focus:ring-0 font-bold shadow-xl absolute right-20 button">
           LOGIN
         </Button>
         

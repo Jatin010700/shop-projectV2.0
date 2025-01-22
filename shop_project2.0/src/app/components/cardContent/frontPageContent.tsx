@@ -95,8 +95,8 @@ export const Card = () => {
     <>
       <section className="bg-white px-4 pb-8">
         <div className="w-full flex justify-center items-center pb-4">
-          <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-2 text-dark font-bold rounded-b-full">
-            New In Store
+          <h1 className="md:text-4xl text-3xl text-center w-full md:w-1/2 bg-RED p-2 text-dark font-bold rounded-b-full">
+            New in store
           </h1>
         </div>
 
@@ -105,7 +105,7 @@ export const Card = () => {
           lg:grid-cols-4 xl:grid-cols-4 gap-4 p-2"
         >
           {products.slice(0, 8).map((item: MongooseModel) => (
-            <li key={item._id} className="flex flex-col hover:scale-105 duration-150 rounded-3xl">
+            <li key={item._id} className="flex flex-col rounded-3xl">
               {isLoading ? (
                 <Preloader
                   key={`preloader-${item._id}`}
@@ -115,22 +115,23 @@ export const Card = () => {
                 />
               ) : (
                 <>
+                <div className=" shadow-xl rounded-3xl text-dark w-72 ">  
                   <div className="relative">
                     <Image
                       src={item.image}
                       alt=""
                       width={100}
                       height={100}
-                      className="w-full rounded-t-3xl "
+                      className="w-full rounded-3xl "
                     />
                     {/* Wishlist Section */}
                     <i
                       className={`bi bi-suit-heart-fill text-2xl absolute top-4 right-5 cursor-pointer 
-                      ${!isLoggedIn || !iconClicks[item._id] ? "text-white" : "text-RED"}`}
+                      ${!isLoggedIn || !iconClicks[item._id] ? "text-white" : "text-RED"} button`}
                       onClick={() => addItemsToWishCart(item)}></i>
                   </div>
 
-                  <div className="flex items-center justify-between gap-1 p-1 px-4">
+                  <div className="flex items-center justify-between gap-1 p-1 px-4 shadow-xl rounded-b-3xl">
                     <h2 className="text-dark text-xl font-bold uppercase">
                       {item.name}
                     </h2>
@@ -139,6 +140,7 @@ export const Card = () => {
                       </span>
                   </div>
                   <Product product={item} />
+                </div>
                 </>
               )}
             </li>

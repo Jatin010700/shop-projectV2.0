@@ -151,7 +151,7 @@ const addItemsToCart = (product: StoreModel) => {
       <SearchInputDiv />
       <section className="bg-white px-4 pb-4">
         <div className="w-full flex justify-center items-center pb-4">
-          <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED p-2 text-dark font-bold rounded-b-full">
+          <h1 className="md:text-4xl text-3xl text-center w-full md:w-1/2 bg-RED p-2 text-dark font-bold rounded-b-full">
             What&apos;s in Store
           </h1>
         </div>
@@ -167,9 +167,9 @@ const addItemsToCart = (product: StoreModel) => {
                   <>
                   <div key={item._id} className="shadow-xl rounded-3xl border-1 border-dark relative">
                     {/* wishlist  buttom */}
-                      <i className={`bi bi-suit-heart-fill text-2xl ml-2 bg-dark  px-[9px] py-1
-                        rounded-tr-3xl rounded-bl-3xl absolute right-0 top-0 shadow-xl cursor-pointer 
-                        ${!isLoggedIn || !iconClicks[item._id] ? "text-white" : "text-RED"}`}
+                      <i className={`bi bi-suit-heart-fill text-2xl leading-[0px] bg-dark pt-[7px] pb-[5px] px-[6px]
+                        rounded-full absolute -right-[18px] top-5 shadow-xl cursor-pointer 
+                        ${!isLoggedIn || !iconClicks[item._id] ? "text-white" : "text-RED"} button`}
                         onClick={() => addItemsToWishCart(item)}></i>
 
                 <div className="flex flex-col items-center gap-1 py-2">
@@ -191,7 +191,7 @@ const addItemsToCart = (product: StoreModel) => {
 
                   <div></div>
                   <button className="bg-dark text-white rounded-full font-bold 
-                  !border-none focus:ring-0  hover:scale-105 duration-150 w-3/4 p-2"
+                  !border-none focus:ring-0 w-3/4 p-2 button"
                   onClick={() =>addItemsToCart(item)}>
                     Add to Cart
                     <i className="bi bi-bag-plus-fill ml-1 text-RED"></i>
@@ -208,7 +208,7 @@ const addItemsToCart = (product: StoreModel) => {
           <div className="flex items-center justify-center h-80">
             <div className="flex flex-col w-full md:w-1/2 bg-dark text-RED py-4 rounded-full">
               <p className="text-2xl font-bold text-center">
-                ITEM NOT FOUND!!!
+                EMPTY!!!
               </p>
             </div>
           </div>

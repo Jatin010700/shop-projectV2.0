@@ -36,8 +36,8 @@ export default function RegisterModal() {
             <h3 className="text-xl text-RED font-bold">
               Create your personal account
             </h3>
-            <button onClick={onCloseModal} className="text-dark absolute top-0 right-0">
-              <i className="bi bi-x-circle-fill text-2xl hover:text-RED scale-105 duration-150"></i>
+            <button onClick={onCloseModal} className="text-dark absolute top-0 right-0 ">
+              <i className="bi bi-x-circle-fill text-2xl hover:text-RED duration-150 "></i>
             </button>
             <div>
               <div className="mb-2 block">
@@ -73,20 +73,18 @@ export default function RegisterModal() {
                   required
                 />
                 <i
-                  className={`bi bi-eye-fill absolute right-5 text-lg cursor-pointer ${
-                    iconClick ? "text-RED" : "text-dark"
-                  } `}
-                  onClick={() => {
+                  className={`bi bi-eye-fill absolute right-5 text-lg cursor-pointer 
+                              ${iconClick ? "text-RED" : "text-dark"} button`}
+                    onClick={() => {
                     setShowPassword(!showPassword);
                     setIconClick(!iconClick);
-                  }}
-                ></i>
+                  }}></i>
               </div>
             </div>
             <div className="w-full flex justify-center">
               <Button
                 className="text-white rounded-full w-full 
-              bg-RED font-bold hover:scale-105 duration-150 shadow-xl !border-none focus:ring-0">
+              bg-RED font-bold shadow-xl !border-none focus:ring-0 button">
                 {isLoading ? (
                   <Preloader
                     preloaderSize="14"
@@ -94,7 +92,7 @@ export default function RegisterModal() {
                     className=""
                   />
                 ) : (
-                  "CREATE ACCOUNT"
+                  "Create Account"
                 )}
               </Button>
             </div>

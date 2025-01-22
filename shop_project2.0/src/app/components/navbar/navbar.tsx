@@ -58,7 +58,7 @@ export default function Navbar() {
         <Link href="/" className="text-xl font-bold ">
           Tech<span className="text-RED text-2xl">Shop</span>
         </Link>
-        <nav className="hidden gap-4 md:flex md:items-center md:justify-center w-full md:w-auto md:mb-0 rounded-b-full bg-RED py-3 px-10">
+        <nav className="hidden gap-4 md:flex md:items-center md:justify-center w-full md:w-auto md:mb-0 rounded-b-full bg-RED py-3 px-10 mr-11">
           <CustomLink to="/store_page" title="What's New"/>
           <CustomLink to="/store_page" title="Store"/>
           <CustomLink to="/" title="About"/>

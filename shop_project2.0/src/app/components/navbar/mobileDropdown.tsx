@@ -29,7 +29,7 @@ export default function MobileDropdownMenu() {
               setIconClick(!iconClick);
             }}
             className={`bi bi-filter-circle-fill cursor-pointer text-4xl ml-16 md:hidden
-                     ${iconClick ? "text-RED" : "text-white"}`}
+                     ${iconClick ? "text-RED" : "text-white"} button`}
           ></i>
         </span>
       )}>

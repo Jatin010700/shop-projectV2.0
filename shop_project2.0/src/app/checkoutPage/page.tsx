@@ -41,7 +41,7 @@ const CheckoutPage = () => {
       <div className="h-1 w-full bg-RED" />
 
       <div className="w-full bg-white flex justify-center items-center pb-4">
-        <h1 className="text-4xl text-center w-full md:w-1/2 bg-RED md:p-2 pb-2 text-dark font-bold rounded-b-full">
+        <h1 className="md:text-4xl text-3xl text-center w-full md:w-1/2 bg-RED md:p-2 pb-2 text-dark font-bold rounded-b-full">
           Confirm your order
         </h1>
       </div>

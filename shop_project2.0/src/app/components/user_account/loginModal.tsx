@@ -123,7 +123,7 @@ export default function LoginModal() {
                 <i
                   className={`bi bi-eye-fill absolute right-5 text-lg cursor-pointer ${
                     iconClick ? "text-RED" : "text-dark"
-                  } `}
+                  } button `}
                   onClick={() => {
                     setShowPassword(!showPassword);
                     setIconClick(!iconClick);
@@ -143,17 +143,15 @@ export default function LoginModal() {
               </div>
               <a
                 href="#"
-                className="text-sm text-RED font-bold hover:underline dark:text-cyan-500"
-              >
+                className="text-sm text-RED font-bold hover:underline dark:text-cyan-500">
                 Forgot Password?
               </a>
             </div>
             <div className="w-full flex justify-center">
               <Button
                 className="text-white rounded-full w-full 
-              bg-RED font-bold hover:scale-105 duration-150 shadow-xl !border-none focus:ring-0"
-                onClick={handleLogin}
-              >
+              bg-RED font-bold shadow-xl !border-none focus:ring-0 button"
+                onClick={handleLogin}>
                 {isLoading ? (
                   <Preloader
                     preloaderSize="14"
@@ -172,7 +170,7 @@ export default function LoginModal() {
               Not registered?
               <Button
                 onClick={openCreateAccountModal}
-                className="rounded-full bg-RED border-1 border-RED font-bold shadow-xl hover:scale-110 duration-150">
+                className="rounded-full bg-RED border-1 border-RED font-bold shadow-xl button">
                 Create Account
               </Button>
             </div>

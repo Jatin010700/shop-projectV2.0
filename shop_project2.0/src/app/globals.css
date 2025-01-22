@@ -63,6 +63,14 @@ body {
   .footerIcon {
       @apply shadow-lg font-normal h-10 w-10 items-center justify-center rounded-full outline-none focus:outline-none mr-2 transition ease-in-out hover:scale-110
   }
+
+  .default-navMenu {
+    @apply cursor-pointer rounded-3xl w-full flex text-dark justify-center hover:bg-dark/5 relative py-1
+  }
+
+  .button {
+    @apply transition ease-in-out active:scale-95 duration-150
+  }
 }
 
 .swiper {

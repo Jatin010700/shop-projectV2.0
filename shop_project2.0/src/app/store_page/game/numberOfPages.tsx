@@ -39,8 +39,8 @@ export const NumberPages = ({ currentPage, totalPages, onPageChange }:numberPage
     <div className="bg-white text-dark">
       <div className="flex justify-center gap-2 px-4 pb-4">
         <div
-          className={`cursor-pointer bg-RED rounded-full w-11 text-center active:transform active:-translate-y-1 transition ease-in-out hover:scale-110 duration-150 ${
-            currentPage > 1 ? "cursor-pointer" : ""
+          className={`cursor-pointer bg-RED rounded-full w-11 text-center button ${
+            currentPage > 1 ? "cursor-pointer" : "opacity-0"
           }`}
           onClick={handleSlideLeft}
         > 
@@ -50,16 +50,16 @@ export const NumberPages = ({ currentPage, totalPages, onPageChange }:numberPage
           <div
             key={index}
             className={`cursor-pointer border-2 border-RED p-2 w-11 text-center rounded-full 
-            hover:bg-dark hover:text-RED font-bold transition ease-in-out hover:scale-110 duration-150 
-            ${currentPage === slideIndex + index + 1 ? "bg-dark text-RED" : ""}`}
+            hover:bg-dark hover:text-RED font-bold button
+            ${currentPage === slideIndex + index + 1 ? "bg-dark text-RED " : ""}`}
             onClick={() => onPageChange(slideIndex + index + 1)}
           >
             {slideIndex + index + 1}
           </div>
         ))}
         <div
-          className={`bg-RED rounded-full w-11 text-center  active:transform active:-translate-y-1 transition ease-in-out hover:scale-110 duration-150 ${
-            currentPage < totalPages ? "cursor-pointer" : ""
+          className={`bg-RED rounded-full w-11 text-center button ${
+            currentPage < totalPages ? "cursor-pointer" : "opacity-0"
           }`}
           onClick={handleSlideRight}
         >

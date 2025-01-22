@@ -57,7 +57,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
   return (
     <>
       <Button 
-      className="bg-dark rounded-b-3xl rounded-t-none font-bold !border-none focus:ring-0 duration-150"
+      className="text-dark w-full rounded-b-3xl font-bold !border-none focus:ring-0 shadow-xl button"
       onClick={() => setOpenModal(true)} >
         View More
       </Button>
@@ -91,7 +91,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
               </p>
               <p>Price: <span className="text-RED font-bold">${product.price}</span></p>
               <button className="bg-dark text-white rounded-full 
-              font-bold py-2 focus:ring-0  hover:scale-105 duration-150"
+              font-bold py-2 focus:ring-0 button"
               onClick={addItemsToCart}>
                 Add to Cart <i className="bi bi-bag-plus-fill text-RED"></i>
               </button>
